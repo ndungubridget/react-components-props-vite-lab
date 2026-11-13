@@ -1,59 +1,106 @@
 :root {
-  --bg: #282c34;
-  --header: #fff;
-  --link: #61dafb;
-  --text: hsla(0, 0%, 100%, 0.88);
+  --bg: #f8f5f2;
+  --header: #292524;
+  --link: #be185d;
+  --text: #44403c;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: "Merriweather", "Georgia", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Georgia, serif;
   background: var(--bg);
   color: var(--text);
-}
-
-h1,
-h3 {
-  font-size: 2em;
-  font-family: Montserrat, sans-serif;
-  font-weight: 900;
+  line-height: 1.7;
 }
 
 .App {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2.5rem 1rem;
-  max-width: 700px;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px 25px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 45px;
 }
 
 header h1 {
-  font-size: 3em;
+  color: var(--header);
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 aside {
   display: flex;
-  margin-bottom: 3rem;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 45px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
 
 aside img {
-  width: 50px;
-  height: 50px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
-  margin-right: 1rem;
-  background-color: black;
+  object-fit: contain;
+  background: #fce7f3;
+}
+
+aside p {
+  font-size: 1.05rem;
+}
+
+main {
+  display: grid;
+  gap: 20px;
 }
 
 article {
-  margin-bottom: 3rem;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid var(--link);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
 }
 
-article p {
-  margin-top: 0.25rem;
+article:hover {
+  transform: translateY(-4px);
 }
 
 article h3 {
   color: var(--link);
-  margin-bottom: 0rem;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+}
+
+article small {
+  color: #78716c;
+}
+
+article p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 30px 18px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  aside {
+    align-items: flex-start;
+  }
 }
